@@ -11,5 +11,5 @@ Here's my personal website.
 - Blog (legacy, mostly Korean, sometimes English): http://eonil-observatory.tumblr.com
 - Twitter (Korean): https://twitter.com/eonilc
 - Twitter (English): https://twitter.com/eonilen
-- LinkedIn: https://kr.linkedin.com/in/hoonh
+- LinkedIn: https://www.linkedin.com/in/hoonh
 
