@@ -9,6 +9,6 @@ Here's my personal website.
 - Resume: https://stackoverflow.com/cv/eonil
 - LinkedIn: https://www.linkedin.com/in/hoonh
 - Blog: https://medium.com/@eonil
-- Twitter (English): https://twitter.com/eonilen
+- Twitter: https://twitter.com/eonilen
 
 
