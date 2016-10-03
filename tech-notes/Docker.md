@@ -6,15 +6,25 @@ I am still not sure what's the best way to install Docker on macOS. For now, I j
 
 
 
-Tips
+Basics
 ----
 - Docker has images and containers. Images are snapshot, and containers are running process.
 - All the container configuration must be done at `docker run`. You cannot modify any after it once
   been executed.
-- Docker container has no networking to host by default.
-- But, you can map a port from a container to host.
 
-For example, you can expose PostgreSQL server container to expose its port to host.
+Networking
+----------
+- Docker containers have no networking to host by default.
+- Docker containers have their own segregated internal network. They are all connected to each other by default.
+  
+You may have toruble to find out IP addresses of each docker containers. Use this.
+
+    docker inspect <container-name>
+    
+To inspect IP address of the container. And even more.
+
+
+
 
 
 
@@ -31,13 +41,14 @@ Run naively.
 Run cleverly.
 
 - Nameless.
-- Remove automatically after exit.
-- Map port `5432` to host to allow host to connect to server.
-- Setup `postgres` database user password.
+- `--rm`: Remove automatically after exit.
+- `-p 5432:5432`: Map port `5432` to host to allow host to connect to server.
+- `-e POSTGRES_PASSWORD=your_password`: Setup `postgres` database user password.
+- `-v \`pwd\`:/var/lib/postgresql/data`: Mount current directory as server's data storage.
 
 Here's the command.
 
-    docker run -p 5432:5432 --rm -e POSTGRES_PASSWORD=your_password postgres
+    docker run -p 5432:5432 --rm -v `pwd`:/var/lib/postgresql/data: -e POSTGRES_PASSWORD=your_password postgres
     
 Connect to the server using `psql`.
 
