@@ -29,10 +29,13 @@ Run naively.
     docker run postgres
 
 Run cleverly.
+
 - Nameless.
 - Remove automatically after exit.
 - Map port `5432` to host to allow host to connect to server.
 - Setup `postgres` database user password.
+
+Here's the command.
 
     docker run -p 5432:5432 --rm -e POSTGRES_PASSWORD=your_password postgres
     
