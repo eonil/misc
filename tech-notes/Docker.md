@@ -23,6 +23,10 @@ You may have toruble to find out IP addresses of each docker containers. Use thi
     
 To inspect IP address of the container. And even more.
 
+Use `jq` if you are having trouble to find IP address value in JSON output.
+
+    docker inspect <container-name> | jq .[].NetworkSettings.IPAddress
+
 
 
 
