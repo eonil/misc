@@ -64,6 +64,20 @@ Listing available tables, views and etc..
 
 
 
+hstore
+------
+*hstore* is an extension to PostgreSQL to store key-value data in a column.
+You can select each keys and values, and perform filtering based on them.
+Keys and values are just strings, and there's no data-types.
+
+For example, here's an SQL command to select all keys in the column.
+
+    select distinct skeys(tags) as a from nodes order by a;
+
+
+
+
+
 
 
 
