@@ -8,10 +8,16 @@ I am still not sure what's the best way to install Docker on macOS. For now, I j
 
 Basics
 ----
-- Docker has images and containers. Images are snapshot, and containers are running process.
-- All the container configuration must be done at `docker run`. You cannot modify any after it once
-  been executed.
+- Docker has *images* and *containers*. Images are snapshot, and containers are running process.
+- You can configure networking of a container after the container has been created.
+- You CANNOT configure host directory mounting after the container has been created.
+  So configure mounting stuffs when you create container by `docker run`.
+  
+But don't worry. You have final option. Stop your container, and `docker commit` it to an image.
+And you can run it again freshly with new options.
 
+
+    
 Networking
 ----------
 - Docker containers have no networking to host by default.
@@ -26,6 +32,15 @@ To inspect IP address of the container. And even more.
 Use `jq` if you are having trouble to find IP address value in JSON output.
 
     docker inspect <container-name> | jq .[].NetworkSettings.IPAddress
+
+
+Mounting
+--------
+You can mount host's file system onto a docker container.
+
+First, let's inspect what's mounted in a container.
+
+    docker inspect <docker-container> | jq .[].Mounts
 
 
 
