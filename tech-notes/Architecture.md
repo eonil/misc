@@ -2,8 +2,8 @@ Architecture
 ============
 Hoon H.
 
-When you write an app, just follow MVC pattern, and it's usually just fine.
-But there's a pitfall. 
+When you write an app, just follow MVC pattern, and it's usually 
+just fine. But there's a pitfall. 
 
 Re-enterring Problem
 --------------------
@@ -12,14 +12,15 @@ In Apple MVC, view-controller observes model.
 This makes you to write model event handlers.
 And for whatever reason, you MUST NOT modify model again
 in those event handlers. Because it will make your execution
-context to re-enter model mutation function, and it can yield
-subtle and invisible crash.
+context to re-enter into the model mutation function, 
+and it can yield subtle and delayed (which hides source of bug) 
+crash.
 
-This could be forgetten very easily, but VERY IMPORTANT.
+This rule can be forgetten very easily, but VERY IMPORTANT.
 Because if you re-enter into model mutator by mistake, such
 mistake is very hard to catch, and also hard to fix.
 
-So I have to explan this completely.
+So I have to explan this more.
 
 Let's assume you have a model and two views.
 
@@ -175,6 +176,17 @@ programmer errors.
 
 
 
+Application vs Simulation
+-------------------------
+Such timing based architecture is just an optimized architecture 
+for applications. Applications usually does not mutate very 
+frequently, so it's usually easy to track over call-stack.
+
+But in simulations, mutations are very frequent (like for each tick)
+and call-stacks usually doesn't help a lot for debugging. In this 
+situation, it's better to keep stream of state history, and mutation
+logs. So in such simulation programs, I recommend to try copy based
+architecture. Anyway, this has not been tried much by myself.
 
 
 
