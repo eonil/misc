@@ -1,5 +1,6 @@
-Architecture
-============
+Architecture/Application
+========================
+2016/10/28
 Hoon H.
 
 When you write an app, just follow MVC pattern, and it's usually 

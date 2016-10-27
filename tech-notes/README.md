@@ -6,4 +6,4 @@ Hoon H.
 - [PostgreSQL](PostgreSQL.md)
 - [OpenStreetMap](OpenStreetMap.md)
 
-- [Architecture](Architecture.md)
+- [Architecture](Architecture)
