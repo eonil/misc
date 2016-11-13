@@ -28,3 +28,46 @@ Execute this to test whether the locale is working well.
 
     perl -e exit
 
+
+
+
+Cleansing Package Dependencies
+------------------------------
+[The solution is here.](http://askubuntu.com/a/187891)
+
+TL;DR
+
+Just delete executable.
+
+    apt-get remove packagename
+
+Delete executable and all configurations.
+
+    apt-get purge packagename 
+
+Delete unused dependencies.
+
+    apt-get autoremove
+
+As a conclusion,
+
+    apt-get purge packagename
+    apt-get autoremove
+
+Done.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
