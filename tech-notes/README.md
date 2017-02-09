@@ -9,3 +9,4 @@ Hoon H.
 - [OpenStreetMap](OpenStreetMap.md)
 
 - [Architecture](Architecture)
+- [Rust](Rust.md)
