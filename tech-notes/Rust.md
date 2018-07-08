@@ -29,7 +29,7 @@ In other words, once referenced values cannot be moved forever until
 all references are removed. This brings limitation on designs.
 
 - *If you want to produce a freely **moveable & copyable** value, you **cannot
-  store references** to the value.*
+  store references** to the values.*
 
 - You can make reference a value only while you can fix the value at a
   single address. 
