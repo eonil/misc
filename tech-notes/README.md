@@ -10,3 +10,4 @@ Hoon H.
 
 - [Architecture](Architecture)
 - [Rust](Rust.md)
+- [Unicode](Unicode.md)
