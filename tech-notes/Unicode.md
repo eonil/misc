@@ -5,8 +5,8 @@ Eonil, 2018
 
 
 
-Surrogate Pair
---------------
+Surrogate Pairs
+---------------
 This is a special workaround to solve limited code point space in UTF-16.
 This code point won't be used in UTF-8 and UTF-32. These code points shoud
 not be appeared in UTF-8 and UTF-32 encoded strings.
@@ -16,12 +16,12 @@ pairs.
 
 In my opinion, 
 
-- **UTF-16 is deprecated**. Tech politics around big corporates is the only reason
-  UTF-16 has not been formaly deprecated yet.
+- **UTF-16 has been deprecated**. Tech politics around big corporates is the only 
+  reason UTF-16 has not been formaly deprecated yet.
 - Therefore, *Surrogate Pairs* are also deprecated.
 - You should not use Surrogate Pairs.
 - Unicode committee defined a new term *Unicode Scalar Values*. Which is actually
-  just Unicode Code Points excepting Surrogate Pairs.
+  just Unicode Code Points except Surrogate Pairs.
 - Which means *Unicode Scalar Values* are a newer version of *Unicode Code Point*.
 - You should not use concept of *Unicode Code Point* unless you're dealing with
   UTF-16.
