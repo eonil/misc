@@ -18,7 +18,7 @@ There are caveats.
 Here's my command that worked. 
 Note that `-DLLDB_INCLUDE_TESTS=OFF` part to disable building test suite.
 
-  cmake -G Xcode -DLLVM_ENABLE_PROJECTS="clang;lldb" -DLLDB_INCLUDE_TESTS=OFF ../llvm-project/llvm
+    cmake -G Xcode -DLLVM_ENABLE_PROJECTS="clang;lldb" -DLLDB_INCLUDE_TESTS=OFF ../llvm-project/llvm
   
 This is for LLVM 9.0 including LLDB.
 
