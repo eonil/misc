@@ -1,3 +1,5 @@
+TEST
+
 # Observatory
 
 Here's my personal website.
